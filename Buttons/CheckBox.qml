@@ -13,6 +13,7 @@ CheckBox {
         anchors.verticalCenter: parent.verticalCenter
         width: 26; height: width
         antialiasing: true
+        radius: 5
         border.width: 2
         border.color: root.checkedColor
 
@@ -20,6 +21,7 @@ CheckBox {
             anchors.centerIn: parent
             width: parent.width*0.7; height: width
             antialiasing: true
+            radius: parent.radius * 0.7
             color: root.checkedColor
             visible: root.checked
         }
