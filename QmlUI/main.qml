@@ -12,7 +12,8 @@ Window {
 
     Column {
         x: 10; y: 10
-        spacing: 10
+        spacing: 15
+
         Text {
             text: "Buttons: "
             font.pixelSize: 18
@@ -21,8 +22,9 @@ Window {
             color: "#a0000000"
         }
 
-        Row {
-            spacing: 15
+        GridLayout {
+            width: root.width - 10
+            rows: 8
 
             Button {
                 text: "First"
@@ -98,6 +100,43 @@ Window {
 
                     RadioButton {
                         text: "Radio Button 3"
+                        checkedColor: modelData
+                    }
+                }
+            }
+        }
+
+        Text {
+            text: "Check Box: "
+            font.pixelSize: 18
+            font.family: "Arial"
+            font.weight: Font.Thin
+            color: "#a0000000"
+        }
+
+        GridLayout {
+            width: root.width
+            rows: 5
+
+            Repeater {
+                model: ["#727CF5", "#0ACF97", "#F9375E", "#FFBC00", "#2B99B9"]//, "#212730"]
+
+                Column {
+                    spacing: 15
+
+                    CheckBox {
+                        text: "Check Button 1"
+                        checked: true
+                        checkedColor: modelData
+                    }
+
+                    CheckBox {
+                        text: "Check Button 2"
+                        checkedColor: modelData
+                    }
+
+                    CheckBox {
+                        text: "Check Button 3"
                         checkedColor: modelData
                     }
                 }

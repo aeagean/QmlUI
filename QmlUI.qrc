@@ -3,5 +3,6 @@
         <file>Buttons/Button.qml</file>
         <file>QmlUI/main.qml</file>
         <file>Buttons/RadioButton.qml</file>
+        <file>Buttons/CheckBox.qml</file>
     </qresource>
 </RCC>

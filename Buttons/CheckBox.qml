@@ -1,18 +1,18 @@
-﻿import QtQuick 2.12
-import QtQuick.Controls 2.12
+﻿import QtQuick 2.0
+ import QtQuick.Controls 2.0
 
-RadioButton {
+CheckBox {
     id: root
 
     property color checkedColor: "#0ACF97"
-    text: qsTr("RadioButton")
+
+    text: qsTr("CheckBox")
 
     indicator: Rectangle {
         x: root.leftPadding
         anchors.verticalCenter: parent.verticalCenter
         width: 26; height: width
         antialiasing: true
-        radius: width/2
         border.width: 2
         border.color: root.checkedColor
 
@@ -20,7 +20,6 @@ RadioButton {
             anchors.centerIn: parent
             width: parent.width*0.7; height: width
             antialiasing: true
-            radius: width/2
             color: root.checkedColor
             visible: root.checked
         }
