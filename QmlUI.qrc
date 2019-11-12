@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>Button/Button.qml</file>
+        <file>Buttons/Button.qml</file>
         <file>QmlUI/main.qml</file>
+        <file>Buttons/RadioButton.qml</file>
     </qresource>
 </RCC>
