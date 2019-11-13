@@ -4,6 +4,7 @@ import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.12
 import "../Buttons"
 import "../Input"
+import "../Progress"
 
 Window {
     id: root
@@ -231,7 +232,7 @@ Window {
                 columns: 3
 
                 Repeater {
-                    id: comBoboxRepeater
+                    id: comboboxRepeater
                     model: ["#727CF5", "#0ACF97", "#F9375E",
                             "#FFBC00", "#2B99B9", "#5A6268",
                             "#EEF2F7", "#212730", "#3498DB"]
@@ -244,11 +245,28 @@ Window {
             }
 
             Text {
-                text: "...: "
+                text: "Slider: "
                 font.pixelSize: 18
                 font.family: "Arial"
                 font.weight: Font.Thin
                 color: "#a0000000"
+            }
+
+            GridLayout {
+                width: root.width
+                rows: 3
+                columns: 3
+
+                Repeater {
+                    id: spinBoxRepeater
+                    model: ["#727CF5", "#0ACF97", "#F9375E",
+                            "#FFBC00", "#2B99B9", "#5A6268",
+                            "#EEF2F7", "#212730", "#3498DB"]
+
+                    Slider {
+                        checkedColor: modelData
+                    }
+                }
             }
         }
     }
