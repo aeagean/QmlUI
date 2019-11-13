@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.12
 import "../Buttons"
+import "../Input"
 
 Window {
     id: root
@@ -183,6 +184,36 @@ Window {
                             checked: true
                         }
                     }
+                }
+            }
+
+            Text {
+                text: "Input: "
+                font.pixelSize: 18
+                font.family: "Arial"
+                font.weight: Font.Thin
+                color: "#a0000000"
+            }
+
+            GridLayout {
+                width: root.width
+                rows: 3
+                columns: 3
+
+                Repeater {
+                    id: textFieldRepeater
+                    model: ["#727CF5", "#0ACF97", "#F9375E",
+                            "#FFBC00", "#2B99B9", "#5A6268",
+                            "#EEF2F7", "#212730"]
+
+                    TextField {
+                        checkedColor: modelData
+                    }
+                }
+
+                TextField {
+                    enabled: false
+                    placeholderText: "禁用状态"
                 }
             }
         }
