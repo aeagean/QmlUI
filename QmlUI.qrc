@@ -9,5 +9,6 @@
         <file>Input/ComboBox.qml</file>
         <file>Input/SpinBox.qml</file>
         <file>Progress/Slider.qml</file>
+        <file>Progress/ProgressBar.qml</file>
     </qresource>
 </RCC>
