@@ -6,5 +6,6 @@
         <file>Buttons/CheckBox.qml</file>
         <file>Buttons/Switch.qml</file>
         <file>Input/TextField.qml</file>
+        <file>Input/ComboBox.qml</file>
     </qresource>
 </RCC>

@@ -216,6 +216,40 @@ Window {
                     placeholderText: "禁用状态"
                 }
             }
+
+            Text {
+                text: "ComboBox: "
+                font.pixelSize: 18
+                font.family: "Arial"
+                font.weight: Font.Thin
+                color: "#a0000000"
+            }
+
+            GridLayout {
+                width: root.width
+                rows: 3
+                columns: 3
+
+                Repeater {
+                    id: comBoboxRepeater
+                    model: ["#727CF5", "#0ACF97", "#F9375E",
+                            "#FFBC00", "#2B99B9", "#5A6268",
+                            "#EEF2F7", "#212730", "#3498DB"]
+
+                    ComboBox {
+                        model: ["First", "Second", "Third"]
+                        checkedColor: modelData
+                    }
+                }
+            }
+
+            Text {
+                text: "...: "
+                font.pixelSize: 18
+                font.family: "Arial"
+                font.weight: Font.Thin
+                color: "#a0000000"
+            }
         }
     }
 
