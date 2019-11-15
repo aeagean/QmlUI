@@ -323,7 +323,8 @@ Window {
                             "#EEF2F7", "#212730", "#3498DB"]
 
                     SpinBox {
-                        value: Math.random()
+                        value: Math.random() * 10
+                        color: modelData
                     }
                 }
             }
