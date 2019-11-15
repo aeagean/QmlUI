@@ -1,6 +1,15 @@
-﻿import QtQuick 2.7
+﻿/**********************************************************
+ * Author: Qt君
+ * 微信公众号: Qt君(首发)
+ * Website: qtbig.com(后续更新)
+ * Email:  2088201923@qq.com
+ * QQ交流群: 732271126
+ * LISCENSE: MIT
+ ************************************************************/
+import QtQuick 2.0
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
+import QtQuick.Shapes 1.0
 import QtQuick.Layouts 1.12
 import "../Buttons"
 import "../Input"
@@ -294,7 +303,30 @@ Window {
                     }
                 }
             }
+
+            Text {
+                text: "SpinBox: "
+                font.pixelSize: 18
+                font.family: "Arial"
+                font.weight: Font.Thin
+                color: "#a0000000"
+            }
+
+            GridLayout {
+                width: root.width
+                rows: 3
+                columns: 3
+
+                Repeater {
+                    model: ["#727CF5", "#0ACF97", "#F9375E",
+                            "#FFBC00", "#2B99B9", "#5A6268",
+                            "#EEF2F7", "#212730", "#3498DB"]
+
+                    SpinBox {
+                        value: Math.random()
+                    }
+                }
+            }
         }
     }
-
 }

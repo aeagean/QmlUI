@@ -10,5 +10,6 @@
         <file>Input/SpinBox.qml</file>
         <file>Progress/Slider.qml</file>
         <file>Progress/ProgressBar.qml</file>
+        <file>Buttons/RoundRectangle.qml</file>
     </qresource>
 </RCC>
