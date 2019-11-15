@@ -1,15 +1,16 @@
 <RCC>
     <qresource prefix="/">
-        <file>Buttons/Button.qml</file>
+        <file>Button/Button.qml</file>
         <file>QmlUI/main.qml</file>
-        <file>Buttons/RadioButton.qml</file>
-        <file>Buttons/CheckBox.qml</file>
-        <file>Buttons/Switch.qml</file>
+        <file>Button/RadioButton.qml</file>
+        <file>Button/CheckBox.qml</file>
+        <file>Button/Switch.qml</file>
         <file>Input/TextField.qml</file>
         <file>Input/ComboBox.qml</file>
         <file>Input/SpinBox.qml</file>
         <file>Progress/Slider.qml</file>
         <file>Progress/ProgressBar.qml</file>
-        <file>Buttons/RoundRectangle.qml</file>
+        <file>Button/RoundRectangle.qml</file>
+        <file>Tumbler/Tumbler.qml</file>
     </qresource>
 </RCC>

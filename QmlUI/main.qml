@@ -10,10 +10,11 @@ import QtQuick 2.0
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import QtQuick.Shapes 1.0
-import QtQuick.Layouts 1.12
-import "../Buttons"
+import QtQuick.Layouts 1.0
+import "../Button"
 import "../Input"
 import "../Progress"
+import "../Tumbler"
 
 Window {
     id: root
@@ -325,6 +326,30 @@ Window {
                     SpinBox {
                         value: Math.random() * 10
                         color: modelData
+                    }
+                }
+            }
+
+            Text {
+                text: "Tumbler: "
+                font.pixelSize: 18
+                font.family: "Arial"
+                font.weight: Font.Thin
+                color: "#a0000000"
+            }
+
+            GridLayout {
+                width: root.width
+                rows: 3
+
+                Repeater {
+                    model: ["#727CF5", "#0ACF97", "#F9375E",
+                            "#FFBC00", "#2B99B9", "#5A6268",
+                            "#EEF2F7", "#212730", "#3498DB"]
+
+                    Tumbler {
+                        model: ["00", "01", "02", "03", "04", "05"]
+                        currentItemColor: modelData
                     }
                 }
             }
