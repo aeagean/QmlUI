@@ -17,6 +17,8 @@ Button {
     property color contentItemTextColor: "white"
 
     text: "Button"
+    hoverEnabled: true
+
     contentItem: Text {
         text: root.text
         color: root.contentItemTextColor
@@ -33,11 +35,12 @@ Button {
         implicitHeight: 37
         color: root.down ? root.backgroundPressedColor : root.backgroundDefaultColor
         radius: 3
-        layer.enabled: true
+        layer.enabled: root.hovered
         layer.effect: DropShadow {
+            visible: root.hovered
             transparentBorder: true
             color: root.down ? root.backgroundPressedColor : root.backgroundDefaultColor
-            samples: 20
+            samples: 8 /*20*/
         }
     }
 }
