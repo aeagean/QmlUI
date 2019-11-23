@@ -103,7 +103,7 @@ Window {
                 rows: 5
 
                 Repeater {
-                    model: ["#727CF5", "#0ACF97", "#F9375E", "#FFBC00", "#2B99B9"]//, "#212730"]
+                    model: ["#727CF5", "#0ACF97", "#F9375E", "#FFBC00", "#2B99B9"]
 
                     Column {
                         spacing: 15

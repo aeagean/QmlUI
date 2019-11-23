@@ -6,8 +6,8 @@
  * QQ交流群: 732271126
  * LISCENSE: MIT
  ************************************************************/
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick 2.0
+import QtQuick.Controls 2.0
 
 RadioButton {
     id: root
