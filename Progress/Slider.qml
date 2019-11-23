@@ -27,7 +27,7 @@ Slider {
         color: "#EBEDEF"
 
         Rectangle {
-            width: root.visualPosition * parent.width
+            width: root.visualPosition == 0 ? 0 : root.handle.x + root.handle.width / 2
             height: parent.height
             color: root.checkedColor
             radius: height / 2
