@@ -15,6 +15,7 @@ RadioButton {
     property color checkedColor: "#0ACF97"
     text: qsTr("RadioButton")
 
+    hoverEnabled: true
     indicator: Rectangle {
         x: root.leftPadding
         anchors.verticalCenter: parent.verticalCenter
@@ -29,8 +30,31 @@ RadioButton {
             width: parent.width*0.7; height: width
             antialiasing: true
             radius: width/2
-            color: root.checkedColor
-            visible: root.checked
+            color: {
+                if (checked)
+                    return checkedColor
+
+                if (hovered)
+                    return "#BDC3C7"
+
+                return "#00000000"
+            }
+            visible: {
+                if (checked)
+                    return true
+
+                if (hovered)
+                    return true
+
+                return false
+            }
+            opacity: visible
+
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 250
+                }
+            }
         }
     }
 }
