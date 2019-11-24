@@ -34,13 +34,22 @@ Button {
         implicitWidth: 83
         implicitHeight: 37
         color: root.down ? root.backgroundPressedColor : root.backgroundDefaultColor
+
+        Rectangle {
+            anchors.fill: parent
+            color: "#20000000"
+            opacity: root.hovered
+            Behavior on opacity {
+                NumberAnimation { duration: 300 }
+            }
+        }
+
         radius: 3
-        layer.enabled: root.hovered
+        layer.enabled: true//root.hovered
         layer.effect: DropShadow {
-            visible: root.hovered
             transparentBorder: true
             color: root.down ? root.backgroundPressedColor : root.backgroundDefaultColor
-            samples: 8 /*20*/
+            samples: 20 /*20*/
         }
     }
 }
