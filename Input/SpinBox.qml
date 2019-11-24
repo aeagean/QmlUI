@@ -8,6 +8,7 @@
  ************************************************************/
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
 
 SpinBox {
       id: root
@@ -74,5 +75,13 @@ SpinBox {
       background: Rectangle {
           implicitWidth: 138
           border.color: "#EBEDEF"
+
+          layer.enabled: root.hovered
+          layer.effect: DropShadow {
+              id: dropShadow
+              transparentBorder: true
+              color: "#EEF2F7"
+              samples: 8 /*20*/
+          }
       }
   }
