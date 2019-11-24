@@ -14,7 +14,6 @@ import QtQuick.Layouts 1.0
 import "../Button"
 import "../Input"
 import "../Progress"
-import "../Tumbler"
 
 Window {
     id: root

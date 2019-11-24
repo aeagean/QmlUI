@@ -56,4 +56,3 @@ Tumbler {
         border.color: "#EBEDEF"
     }
 }
-

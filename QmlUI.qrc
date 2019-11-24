@@ -11,6 +11,6 @@
         <file>Progress/Slider.qml</file>
         <file>Progress/ProgressBar.qml</file>
         <file>Button/RoundRectangle.qml</file>
-        <file>Tumbler/Tumbler.qml</file>
+        <file>Input/Tumbler.qml</file>
     </qresource>
 </RCC>
