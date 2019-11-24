@@ -8,6 +8,7 @@
  ************************************************************/
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
 
 Tumbler {
     id: root
@@ -54,5 +55,12 @@ Tumbler {
         width: root.width;
         height: root.height
         border.color: "#EBEDEF"
+
+        layer.enabled: root.hovered
+        layer.effect: DropShadow {
+            transparentBorder: true
+            color: root.currentItemColor
+            samples: 5 /*20*/
+        }
     }
 }
