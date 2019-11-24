@@ -16,6 +16,7 @@ CheckBox {
 
     text: qsTr("CheckBox")
 
+    hoverEnabled: true
     indicator: Rectangle {
         x: root.leftPadding
         anchors.verticalCenter: parent.verticalCenter
@@ -30,8 +31,31 @@ CheckBox {
             width: parent.width*0.7; height: width
             antialiasing: true
             radius: parent.radius * 0.7
-            color: root.checkedColor
-            visible: root.checked
+            color: {
+                if (checked)
+                    return checkedColor
+
+                if (hovered)
+                    return "#BDC3C7"
+
+                return "#00000000"
+            }
+            visible: {
+                if (checked)
+                    return true
+
+                if (hovered)
+                    return true
+
+                return false
+            }
+            opacity: visible
+
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 250
+                }
+            }
         }
     }
 }
