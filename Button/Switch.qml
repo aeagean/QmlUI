@@ -8,11 +8,13 @@
  ************************************************************/
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
 
 Switch {
     id: root
     property color checkedColor: "#0ACF97"
 
+    hoverEnabled: true
     indicator: Rectangle {
         width: 54
         height: 34
@@ -20,14 +22,6 @@ Switch {
         color: root.checked ? checkedColor : "white"
         border.width: 2
         border.color: root.checked ? checkedColor : "#E5E5E5"
-
-//        Behavior on color {
-//            ColorAnimation {
-//                duration: 300
-//                to: root.checked ? checkedColor : "white"
-//                onToChanged: console.log(to)
-//            }
-//        }
 
         Rectangle {
             x: root.checked ? parent.width - width - 2 : 1
@@ -41,6 +35,14 @@ Switch {
             Behavior on x {
                 NumberAnimation { duration: 200 }
             }
+        }
+
+        layer.enabled: root.hovered
+        layer.effect: DropShadow {
+            id: dropShadow
+            transparentBorder: true
+            color: root.checked ? root.checkedColor : "#E5E5E5"
+            samples: 10 /*20*/
         }
     }
 }
