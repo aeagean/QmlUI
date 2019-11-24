@@ -8,6 +8,7 @@
  ************************************************************/
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
 
 ComboBox {
     id: root
@@ -78,6 +79,13 @@ ComboBox {
         implicitHeight: 41
         color: root.down ? Qt.darker(root.checkedColor, 1.2) : root.checkedColor
         radius: 5
+
+        layer.enabled: root.hovered | root.down
+        layer.effect: DropShadow {
+            transparentBorder: true
+            color: root.checkedColor
+            samples: 10 /*20*/
+        }
     }
 
     popup: Popup {
@@ -99,6 +107,13 @@ ComboBox {
             color: "#F3F4F5"
             radius: 5
             clip: true
+
+            layer.enabled: root.hovered | root.down
+            layer.effect: DropShadow {
+                transparentBorder: true
+                color: "#F3F4F5"
+                samples: 10 /*20*/
+            }
         }
     }
 }
