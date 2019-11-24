@@ -8,6 +8,7 @@
  ************************************************************/
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
 
 TextField {
     id: root
@@ -30,6 +31,14 @@ TextField {
         border.color: root.enabled ? root.checkedColor : "#D5DBDB"
         border.width: 2
         opacity: root.enabled ? 1 : 0.7
+
+        layer.enabled: root.hovered
+        layer.effect: DropShadow {
+            id: dropShadow
+            transparentBorder: true
+            color: root.checkedColor
+            samples: 10 /*20*/
+        }
     }
 
     cursorDelegate: Rectangle {
