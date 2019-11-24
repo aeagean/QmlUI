@@ -8,6 +8,7 @@
  ************************************************************/
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
 
 Slider {
     id: root
@@ -31,6 +32,14 @@ Slider {
             height: parent.height
             color: root.checkedColor
             radius: height / 2
+
+
+            layer.enabled: root.hovered | root.pressed
+            layer.effect: DropShadow {
+                transparentBorder: true
+                color: root.checkedColor
+                samples: 8
+            }
         }
     }
 
@@ -41,5 +50,12 @@ Slider {
         implicitHeight: implicitWidth
         radius: implicitWidth / 2
         color: root.pressed ? Qt.darker(root.checkedColor, 1.2) : root.checkedColor
+
+        layer.enabled: root.hovered | root.pressed
+        layer.effect: DropShadow {
+            transparentBorder: true
+            color: root.checkedColor
+            samples: 10 /*20*/
+        }
     }
 }
