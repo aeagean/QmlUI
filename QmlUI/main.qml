@@ -198,7 +198,7 @@ Window {
             }
 
             Text {
-                text: "Input: "
+                text: "Text Input: "
                 font.pixelSize: 18
                 font.family: "Arial"
                 font.weight: Font.Thin
