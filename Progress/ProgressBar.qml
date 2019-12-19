@@ -15,13 +15,13 @@ ProgressBar {
     property color color: "#3498DB"
 
     value: 0.5
-    padding: 2
+//    padding: 2
 
     background: Rectangle {
         implicitWidth: 200
-        implicitHeight: 12
+        implicitHeight: 20
         color: "#EBEDEF"
-        radius: implicitHeight / 2
+//        radius: implicitHeight / 2
     }
 
     contentItem: Item {
@@ -32,6 +32,7 @@ ProgressBar {
             width: root.visualPosition * parent.width
             height: parent.height
             color: root.color
+//            radius: parent.height / 2
         }
     }
 }
