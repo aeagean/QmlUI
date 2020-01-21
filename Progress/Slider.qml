@@ -50,6 +50,7 @@ Slider {
         implicitHeight: implicitWidth
         radius: implicitWidth / 2
         color: root.pressed ? Qt.darker(root.checkedColor, 1.2) : root.checkedColor
+        border.color: Qt.darker(root.checkedColor, 0.93)
 
         layer.enabled: root.hovered | root.pressed
         layer.effect: DropShadow {
