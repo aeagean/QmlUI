@@ -12,5 +12,6 @@
         <file>Progress/ProgressBar.qml</file>
         <file>Button/RoundRectangle.qml</file>
         <file>Input/Tumbler.qml</file>
+        <file>Input/RangeSlider.qml</file>
     </qresource>
 </RCC>
